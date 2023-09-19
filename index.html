@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <title>A Dona do Pedaço</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a id="logo" href="#"><img src="images/logo.png" height="40px" /></a>
+      </div>
+      <div class="botoes">
+        <a href="#c"><b>Home</b></a>
+      </div>
+      <div class="botoes">
+        <a href="#m"><b>Produtos</b></a>
+      </div>
+      <div class="botoes">
+        <a href="#h"><b>História</b></a>
+      </div>
+
+      <div class="car">
+        <i class="fas fa-shopping-cart" style="font-size: 25px"></i>
+      </div>
+    </header>
+    <main class="container">
+      <div class="capa" id="c">
+        <img src="images/capa.png" />
+      </div>
+      <div class="cadastrar-bolo">
+        <h2>Cadastrar Novo Bolo</h2>
+        <form id="cadastrarForm" onsubmit="cadastrarBolo(event)" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" name="descricao" required></textarea>
+
+          <label for="peso">Peso (kg):</label>
+          <input type="number" id="peso" name="peso" step="0.01" required />
+
+          <label for="preco">Preço (R$):</label>
+          <input type="number" id="preco" name="preco" step="0.01" required />
+
+          <button type="submit" class="cadastrar-bolo-btn">
+            Cadastrar Bolo
+          </button>
+        </form>
+      </div>
+      <div class="produtos" id="m"></div>
+
+      <div class="historia" id="h">
+        <div class="texto">
+          <h1>Como tudo começou...</h1>
+          <p>
+            À base de muito trabalho, dedicação e de não se deixar abater pelas
+            dificuldades, Maria da Paz apostou no seu negócio.
+          </p>
+          <p>
+            Ela tem origem pobre, trabalhou como cortadora de cana e empregada
+            doméstica. A oportunidade surgiu quando a funcionária da patroa, que
+            vendia bolos, teve problemas de saúde. Maria da Paz assumiu a função
+            de preparar os bolos e, adivinha... assumiu o negócio.
+          </p>
+        </div>
+        <div id="imgdona"><img src="images/dona.png" /></div>
+      </div>
+      <div class="footer">
+        <div class="redes">
+          <i
+            class="fab fa-facebook-f"
+            style="font-size: 24px; line-height: 30px"
+          ></i>
+        </div>
+        <div class="redes">
+          <i class="fab fa-twitter" style="font-size: 24px"></i>
+        </div>
+        <div class="redes">
+          <i class="fab fa-youtube" style="font-size: 24px"></i>
+        </div>
+        <div class="redes">
+          <i class="fab fa-instagram" style="font-size: 24px"></i>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
